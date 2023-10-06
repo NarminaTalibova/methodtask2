@@ -1,32 +1,124 @@
-# Prerequisites
-*.d
+namespace ConsoleApp7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //TASK 1
+            //int[] array = { 1, 2, 3, 4, 5 };
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+            //Console.WriteLine("Əvvəlki array:");
+            //PrintArray(array);
 
-# Precompiled Headers
-*.gch
-*.pch
+            //InsertArray(ref array, 6, 7, 8);
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+            //Console.WriteLine("Dəyişdirilmiş array:");
+            //PrintArray(array);
 
-# Fortran module files
-*.mod
-*.smod
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+            //TASK 2
+            //int[] array = { 3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5 };
 
-# Executables
-*.exe
-*.out
-*.app
+            //Console.WriteLine("Evvelki array:");
+            //PrintArray(array);
+
+            //SwapMinMax(ref array);
+
+            //Console.WriteLine("En kiçik ve en böyük elementlerin yerleri deyişdirilmiş array:");
+            //PrintArray(array);
+
+
+
+            //TASK 3
+            // Test üçün string
+            string name = " Narmina Talibova ";
+
+            // Metodu tətbiq edib və nəticəni ekrana çap edirik
+            string duzeltilmisName = BosluqlariSil(name);
+            Console.WriteLine(duzeltilmisName);
+        }
+
+        //TASK 1
+        //    static void InsertArray(ref int[] arr, params int[] values)
+        //    {
+        //        int originalLength = arr.Length;
+        //        int newLength = originalLength + values.Length;
+
+        //        // Yeni array yarat
+        //        int[] newArray = new int[newLength];
+
+        //        // Əvvəlki array elementlərini yeni array-ə kopyala
+        //        for (int i = 0; i < originalLength; i++)
+        //        {
+        //            newArray[i] = arr[i];
+        //        }
+
+        //        // Params-dan gələn dəyərləri yeni array-ə əlavə et
+        //        for (int i = 0; i < values.Length; i++)
+        //        {
+        //            newArray[originalLength + i] = values[i];
+        //        }
+
+        //        // Əvvəlki array-i yeni array ilə əvəz et
+        //        arr = newArray;
+        //    }
+
+        //    static void PrintArray(int[] arr)
+        //    {
+        //        foreach (int value in arr)
+        //        {
+        //            Console.Write(value + " ");
+        //        }
+        //        Console.WriteLine();
+        //    }
+
+
+
+        //TASK 2
+        //static void SwapMinMax(ref int[] arr)
+        //{
+        //    if (arr.Length < 2)
+        //    {
+        //        return; // Ən azı iki element olmalıdır
+        //    }
+
+        //    int minIndex = Array.IndexOf(arr, arr.Min());
+        //    int maxIndex = Array.IndexOf(arr, arr.Max());
+
+        //    // Ən kiçik və ən böyük elementlərin yerlərini dəyiş
+        //    int temp = arr[minIndex];
+        //    arr[minIndex] = arr[maxIndex];
+        //    arr[maxIndex] = temp;
+        //}
+
+        //static void PrintArray(int[] arr)
+        //{
+        //    foreach (int value in arr)
+        //    {
+        //        Console.Write(value + " ");
+        //    }
+        //    Console.WriteLine();
+        //}
+
+
+        //TASK 3
+        static string BosluqlariSil(string input)
+        {
+            // Yeni bir string yarat
+            string yeniString = "";
+
+            // Hər bir simvol üçün dövr
+            foreach (char herf in input)
+            {
+                // Boşluq deyilsə, yeni string-ə əlavə et
+                if (herf != ' ')
+                {
+                    yeniString += herf;
+                }
+            }
+
+            // Nəticəni qaytar
+            return yeniString;
+        }
+    }
+}
